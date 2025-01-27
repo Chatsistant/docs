@@ -2,71 +2,57 @@
 title: Frustration Detection
 ---
 
-To create a simple Frustration Detection Agent, head to the “AI Agents” tab. You can find the template for
-a Frustration Detection Agent when you click on "Create new Agent".
+## Frustration Detection = Conversation Labeling
 
-<Frame>
-  <img src="/images/frustration-detection-1.png" />
-</Frame>
+**Conversation Labeling** is a powerful feature that allows you to monitor conversations in the backend by tagging or labeling specific aspects of user interactions. This capability, now built into the customization settings under the “Conversation Labeling” section, operates as a background agent within your chatbot’s architecture. It enables you to optimize the bot’s performance, take appropriate actions, and proactively manage user experience.
 
-After you create the new Agent, go into its edit screen by clicking on it. Frustration Detection Agent is a background Agent.
-It is always run in parallel to the user-facing Agent currently handling the user’s input query.
-To learn more about background Agents, please see [Background Agents](/background-agents).
+## Key Features of Conversation Labeling
 
-<Frame>
-  <img src="/images/frustration-detection-2.png" />
-</Frame>
+### Tagging and Assigning Actions:
+- Label conversations to identify user sentiment, specific intents, or critical keywords.
+- Use these tags to assign appropriate actions, such as initiating a human escalation or triggering automated workflows.
 
-Scroll down to review the base prompt. You can modify it based on what type of behavior
-you would like the Agent to monitor for. You can also set the LLM that the background Agent
-should use when analyzing the user's behavior. For a good balance between cost and performance, we recommend GPT-4-1106-1k
+### Monitoring and Analyzing Conversations:
+- Track conversations in the background to identify patterns of frustration or other user sentiments.
+- Analyze tagged conversations to uncover areas where user challenges can be addressed or workflows can be improved.
 
-Click “Save changes” after you are done.
+### Proactive Optimization:
+- Train your chatbot to handle user frustration by analyzing tagged data and implementing plans to smooth out problem areas.
+- Allow for human intervention before issues escalate, increasing customer satisfaction without requiring manual review of entire messages.
 
-Next, go to the “Variables / Tags” tab. Notice that the template already defines a number of tags for you.
-You can configure the settings for each tag by clicking on the pencil icon to the right of each card.
+### Enhanced User Experience:
+- Continuously refine your bot based on tagged data to ensure a seamless and effective interaction for end-users.
 
-<Frame>
-  <img src="/images/frustration-detection-3.png" />
-</Frame>
+## How to Set Up and Use Conversation Labeling
 
-When you are adding / editing tags, you will be asked to specify the tag Name, Color, as well as
-Criteria for assignment. Be concise and explicit in your definition. Keep in mind that these criteria
-are evaluated against the user’s most recent conversation history.
+### Access the Feature:
+1. Navigate to the Customization Settings under the “Conversation Labeling” section.
+2. This feature is integrated into the architecture and acts as a background agent to monitor and tag conversations.
 
-<Frame>
-  <img src="/images/frustration-detection-4.png" />
-</Frame>
+### Label Conversations:
+- Define criteria for tags that identify specific conversation elements, such as user frustration, positive sentiment, or actionable intents.
+- Examples of tags include:
+  - **Frustration Detected**: Triggered by repeated queries or negative sentiment.
+  - **Escalation Needed**: Signals when a human agent should intervene.
+  - **Positive Feedback**: Highlights successful user interactions.
 
-Please note that tags are fixed once they have been assigned to conversations. Updating tags will only
-apply changes to NEW conversations, not older ones. Older conversations will still have the previous version
-of your tags before you made those updates.
+### Assign Colors and Criteria:
+- Customize tags by specifying their name, color, and criteria for assignment.
+- Ensure the criteria are clear and concise, as these are evaluated against the user’s recent conversation history.
 
-Click “Save changes” and close the Agent edit dialog. Return to the Agent selection view.
-You can now “Connect” your new Frustration Detection Agent. On the top right of the Agent card,
-open the “three dot” dropdown menu, then select “Connect”.
+### Analyze and Optimize:
+- Use tagged conversations to analyze common user challenges and refine chatbot workflows.
+- Deep dive into data to identify where user experience improvements are needed, such as refining bot responses or automating specific actions.
 
-<Frame>
-  <img src="/images/frustration-detection-5.png" />
-</Frame>
+### Proactive Steps:
+- Based on the insights gathered, train your chatbot to handle similar scenarios in the future.
+- Implement a plan to address frustration points and enhance overall interaction quality.
 
-Go to the “Preview” tab. You can now test your new chatbot, now equipped with Frustration Detection capabilities!
+## Benefits of Conversation Labeling
 
-To review the data you collected, open the “Debug mode” while you are still in Preview.
+- **Preventive Action**: Detect and address issues before they escalate.
+- **Streamlined Monitoring**: Monitor conversations in real time without manual intervention.
+- **Human Escalation Awareness**: Assign conversations to human agents when necessary, backed by detailed tags and analysis.
+- **Continuous Improvement**: Leverage tagged data to train and optimize chatbot responses, ensuring a better user experience over time.
 
-<Frame>
-  <img src="/images/frustration-detection-6.png" />
-</Frame>
-
-You can also head to the “Inbox” tab, find the test conversation session, then open “Debug view”.
-
-<Frame>
-  <img src="/images/frustration-detection-7.png" />
-</Frame>
-
-You can export the data you collected within a conversation by going to the “Inbox” tab, selecting the conversation session of
-interest, then clicking the “Export” button. In the subsequent dropdown, select “Chat History”.
-
-<Frame>
-  <img src="/images/frustration-detection-8.png" />
-</Frame>
+By using **Conversation Labeling**, you gain deep insights into user interactions and the ability to manage conversations effectively. This feature not only enhances chatbot performance but also ensures that end-users feel heard and satisfied with their interactions. Start leveraging this tool to monitor, analyze, and optimize your chatbot today!
