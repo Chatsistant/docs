@@ -6,6 +6,7 @@ description: "Use your Chatsistant chatbots and account inside ChatGPT through C
 Chatsistant is live in ChatGPT through a first-party native MCP connection. Authorized users can work with supported Chatsistant resources conversationally, directly inside ChatGPT, while keeping permission scope and approved write actions under their control.
 
 **Status: Live in ChatGPT** · Public plugin · OAuth authorization
+![The Chatsistant plugin page in ChatGPT](/images/mcp-plugin-page.png)
 
 ### What you can do
 
@@ -22,8 +23,13 @@ The Chatsistant plugin provides 19 tools for working with your chatbots, agents,
 
 1. Open the Chatsistant plugin in ChatGPT: [https://chatgpt.com/plugins/plugin_asdk_app_6acf0de6ec8c81919ed9bed49a7a705e](https://chatgpt.com/plugins/plugin_asdk_app_6acf0de6ec8c81919ed9bed49a7a705e)
 2. Choose **Read Only** or **Read + Write** access.
-3. Sign in with your Chatsistant account when prompted (OAuth) and approve the connection.
+3. On the Chatsistant connection page, enter an account label, your Chatsistant account API key, and the UUIDs of the chatbots you want to connect (you can connect up to five accounts and ten chatbots in total). Your API key is created in your Chatsistant account (see "Getting a Chatsistant API Key" in the API References section of these docs), and each chatbot's UUID is shown under the chatbot's name on its Dashboard — click the UUID to copy it.
 4. Start asking ChatGPT about your chatbots, sources, conversations, leads, and bookings.
+
+You can connect up to five accounts and ten chatbots in total. On the connection page, use 'Add another chatbot to this account' for more chatbots on the same account, or 'Add another account' to bring in another Chatsistant account with its own API key. Connected accounts are managed afterwards from the plugin's Settings in ChatGPT.
+
+![The full Chatsistant connection page: API key, chatbot UUIDs, add another account, and the access scope choice](/images/mcp-connect-full.png)
+![In your Chatsistant Dashboard, each chatbot's UUID is under its name — click it to copy](/images/mcp-dashboard-uuid.png)
 
 ### Plans
 
