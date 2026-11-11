@@ -17,14 +17,14 @@
       "server": "https://app.chatsistant.com/api",
       "auth": {
         "method": "bearer",
-        "name": null
+        "name": "Authorization"
       }
     }
   },
   "background": {
-    "decoration": null,
+    "decoration": "gradient",
     "color": {
-      "light": null,
+      "light": "#FFFFFF",
       "dark": "#111827"
     }
   },
@@ -35,7 +35,7 @@
         "href": "mailto:hello@chatsistant.com"
       }
     ],
-    "primary": null
+    "primary": {"type": "button", "label": "Get started", "href": "https://chatsistant.com"}
   },
   "navigation": {
     "anchors": [
