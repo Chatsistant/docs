@@ -1,0 +1,21 @@
+---
+title: "MCP Permissions & Protected Writes"
+description: "How Read Only and Read + Write access work for the Chatsistant ChatGPT connection, and how write actions stay approval-protected."
+---
+
+### Read Only
+
+ChatGPT can retrieve and summarize supported Chatsistant data — chatbots, agents, source metadata/tags, conversations, leads, bookings, escalations. Read Only access cannot change anything in your account.
+
+### Read + Write
+
+In addition to reading, ChatGPT can perform supported write actions: creating FAQs, renaming sources, managing source tags, and selected writing workflows.
+
+### Protected writes
+
+Write actions are protected: they run only within the permissions of the connected Chatsistant account, and supported changes require the user's approval in ChatGPT before they are applied. If you disconnect the plugin in ChatGPT, all MCP access ends immediately.
+
+### Security notes
+
+- Authentication is OAuth-based; Chatsistant never asks for your password inside ChatGPT.
+- Access is scoped to the account you connect — connect only accounts you are authorized to use.
