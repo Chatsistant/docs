@@ -124,5 +124,53 @@ If there is a need to change the token, simply update the src attribute of the i
 
 Upon updating the token in the URL, the iframe will reload, ensuring that the new token is used for authentication.
 
+### Set initial message variables
+
+Besides the identity token, the **GPTTConfig** object can carry **initial message variables**: values your chatbot can use in its first messages, such as greeting a signed-in user by name.
+
+Set the `initial_messages_variables` property to an object with the values you want to pass:
+
+```js
+window.GPTTConfig = window.GPTTConfig || {};
+window.GPTTConfig.initial_messages_variables = {
+  email: "john.doe@example.com",
+  name: "John Doe",
+  phone: "+1 555-123-4567"
+};
+```
+
+If the values live in your own system, fetch them first, then set the variables from the response:
+
+```js
+// Simulated API call function
+function fetchUserInfo() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve({
+        email: "john.doe@example.com",
+        name: "John Doe",
+        phone: "+1 555-123-4567"
+      });
+    }, 1000); // simulate 1s delay
+  });
+}
+
+document.getElementById("fetchBtn").addEventListener("click", async () => {
+  const userInfo = await fetchUserInfo();
+
+  // Set the initial_messages_variables in window.GPTTConfig
+  window.GPTTConfig = window.GPTTConfig || {};
+  window.GPTTConfig.initial_messages_variables = {
+    email: userInfo.email,
+    name: userInfo.name,
+    phone: userInfo.phone
+  };
+
+  // Display it on the page
+  document.getElementById("output").textContent =
+    JSON.stringify(window.GPTTConfig.initial_messages_variables, null, 2);
+});
+```
+
 Congratulations! You have now successfully completed the setup of the User Identity Verification feature for your Chatsistant Chatbot.
 By following the steps outlined in this guide, you have enabled a robust and secure method for authenticating users, ensuring a safe and reliable user experience.

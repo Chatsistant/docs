@@ -9,6 +9,8 @@ This is where function-calling comes in. Through function-calling, you can serve
 conversation session. To show you how, we walk you through an example of RAG enrichment using (abstracts of) academic papers sourced from a trusted 
 academic papers aggregator: Semantic Scholar API.
 
+The provider in this walkthrough is Semantic Scholar, but the setup is the same for any JSON API. If you want your agent to work with live web answers or another model provider's API — for example Perplexity or Google Gemini — you connect it the same way: same function setup, same headers and authentication pattern, same fixed and variable parameters. Only the endpoint and the parameters change.
+
 ## Setting up and testing the function
 
 First, you’ll need an API key from your external data provider, whoever that may be, assuming they have a secure API. In our case, we requested one 

@@ -12,9 +12,15 @@ description: "Fetch single chatbot session base on session uuid"
 
 ### Response
 
-<ResponseField name="created_at" type="string" />
-<ResponseField name="modified_at" type="string" />
-<ResponseField name="uuid" type="string" />
+<ResponseField name="created_at" type="string">
+</ResponseField>
+
+<ResponseField name="modified_at" type="string">
+</ResponseField>
+
+<ResponseField name="uuid" type="string">
+</ResponseField>
+
 <ResponseField name="meta" type="meta Object">
   Session meta properties
   <Expandable title="properties">
@@ -83,7 +89,11 @@ axios
 {
   "created_at": "string",
   "modified_at": "string",
-  "uuid": "string"
+  "uuid": "string",
+  "meta": {
+    "user": {},
+    "auth_data": {}
+  }
 }
 ```
 

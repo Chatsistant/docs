@@ -1,0 +1,156 @@
+---
+title: "Update Chatbot"
+api: "PATCH https://app.chatsistant.com/api/v1/chatbot/{uuid}/update"
+description: "Partial update. Send only the fields you want to change. Fields you leave out keep their current values. The request body, path parameter, and response are the same as the POST update for this resource."
+---
+
+### Path
+
+<ParamField path="uuid" type="string" required>
+  Chatbot uuid
+</ParamField>
+
+### Body
+
+<ParamField body="name" type="string">
+</ParamField>
+
+<ParamField body="visibility" type="string">
+</ParamField>
+
+<ParamField body="rate_limit" default="[20, 240]" type="number[]">
+</ParamField>
+
+<ParamField body="rate_limit_message" type="string">
+</ParamField>
+
+<ParamField body="show_citations" type="boolean">
+</ParamField>
+
+### Response
+
+<ResponseField name="created_at" type="string">
+</ResponseField>
+
+<ResponseField name="meta" type="object">
+  The meta of chatbot
+
+  <Expandable title="Chatbot meta">
+    <ResponseField name="rate_limit" type="number[]">
+    </ResponseField>
+
+    <ResponseField name="rate_limit_message" type="string">
+    </ResponseField>
+
+    <ResponseField name="show_citation" type="boolean">
+    </ResponseField>
+
+    <ResponseField name="visibility" type="string">
+    </ResponseField>
+  </Expandable>
+</ResponseField>
+
+<ResponseField name="modified_at" type="string">
+</ResponseField>
+
+<ResponseField name="name" type="string">
+</ResponseField>
+
+<ResponseField name="uuid" type="string">
+</ResponseField>
+
+<RequestExample>
+
+```bash Curl
+curl --location --request PATCH 'https://app.chatsistant.com/api/v1/chatbot/{uuid}/update' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer <token>' \
+--data-raw '{
+  "name": "string"
+  "rate_limit": [
+    20,
+    240
+  ],
+  "rate_limit_message": "Too many messages",
+  "show_citations": false,
+  "visibility": "private"
+}'
+```
+
+```py Python
+import requests
+
+uuid = '<chatbot-uuid>'
+url = f'https://app.chatsistant.com/api/v1/chatbot/{uuid}/update'
+headers = {
+    'Content-Type': 'application/json',
+    'Authorization': 'Bearer <token>'
+}
+
+data = {
+    "name": "string",
+    "rate_limit": [20, 240],
+    "rate_limit_message": "Too many messages",
+    "show_citations": False,
+    "visibility": "private"
+}
+
+response = requests.patch(url, headers=headers, json=data)
+
+if response.status_code == 200:
+    print("Request successful!")
+    print(response.json())
+else:
+    print("Request failed with status code:", response.status_code)
+    print(response.text)
+```
+
+```ts JavaScript
+const axios = require("axios");
+
+const uuid = "<chatbot-uuid>";
+const url = `https://app.chatsistant.com/api/v1/chatbot/${uuid}/update`;
+const headers = {
+  "Content-Type": "application/json",
+  Authorization: "Bearer <token>",
+};
+
+const data = {
+  name: "string",
+  rate_limit: [20, 240],
+  rate_limit_message: "Too many messages",
+  show_citations: false,
+  visibility: "private",
+};
+
+axios
+  .patch(url, data, { headers })
+  .then((response) => {
+    console.log("Request successful!");
+    console.log(response.data);
+  })
+  .catch((error) => {
+    console.error("Request failed:", error);
+  });
+```
+
+</RequestExample>
+
+<ResponseExample>
+
+```json Response
+{
+  "created_at": "string",
+  "meta": {
+    "rate_limit": [20, 240],
+    "rate_limit_message": "Too many messages",
+    "show_citations": false,
+    "visibility": "private"
+  },
+  "modified_at": "string",
+  "name": "string",
+  "uuid": "string"
+}
+```
+
+</ResponseExample>
