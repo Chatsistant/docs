@@ -42,7 +42,7 @@
       {
         "anchor": "Documentation",
         "icon": "book-open",
-        "groups": [
+        "pages": [
           {
             "group": "Getting Started",
             "pages": [
@@ -81,12 +81,13 @@
             ]
           },
           {
-            "group": "ChatGPT & MCP",
+            "group": "AI Integrations & MCP",
             "pages": [
               "mcp/overview",
               "mcp/permissions"
             ]
-          }
+          },
+          "mcp/claude"
         ]
       },
       {
